@@ -1,0 +1,23 @@
+{
+ "add_total_row": 0,
+ "apply_user_permissions": 1,
+ "creation": "2026-01-01 00:00:00",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "idx": 6,
+ "is_standard": "Yes",
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Partner Capital Statement",
+ "owner": "Administrator",
+ "ref_doctype": "Partner Capital Account",
+ "report_name": "Partner Capital Statement",
+ "report_type": "Script Report",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Accounts Manager"},
+  {"role": "Accounts User"}
+ ]
+}

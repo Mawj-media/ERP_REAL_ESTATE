@@ -1,0 +1,28 @@
+*.pyc
+__pycache__/
+.DS_Store
+*.orig
+*.swp
+*.swo
+*~
+.env
+.env.local
+dist/
+bower_components/
+node_modules/
+*.egg-info/
+*.sqlite3
+
+# Customer data
+customer_payments_sample.csv
+
+# Frappe
+*.pyc
+__pycache__/
+*.pyo
+*.egg-info/
+.env
+.env.local
+dist/
+bower_components/
+node_modules/

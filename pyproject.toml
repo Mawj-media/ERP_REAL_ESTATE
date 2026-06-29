@@ -1,0 +1,20 @@
+[project]
+name = "real_estate"
+description = "Real Estate Development Management"
+authors = [
+    { name = "Your Company", email = "dev@example.com" }
+]
+requires-python = ">=3.11"
+readme = "README.md"
+dynamic = ["version"]
+
+dependencies = [
+    "erpnext",
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project.urls]
+Repository = "https://github.com/yourorg/real_estate"

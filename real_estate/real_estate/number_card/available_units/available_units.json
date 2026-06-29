@@ -1,0 +1,22 @@
+
+{
+ "aggregate_function_based_on": "",
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "Number Card",
+ "document_type": "Unit",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Unit\",\"status\",\"=\",\"Available\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Available Units",
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Available Units",
+ "owner": "Administrator",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Monthly",
+ "type": "Document Type"
+}

@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "real_estate_project",
+  "budget_date",
+  "version",
+  "column_break_4",
+  "company",
+  "approval_status",
+  "section_budget_lines",
+  "budget_lines",
+  "section_totals",
+  "total_budget_amount",
+  "total_actual_amount",
+  "column_break_11",
+  "total_variance",
+  "section_approval",
+  "approved_by",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "real_estate_project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Real Estate Project",
+   "options": "Real Estate Project",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "budget_date",
+   "fieldtype": "Date",
+   "label": "Budget Date"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Int",
+   "label": "Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "real_estate_project.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Draft\nApproved\nRevised\nRejected"
+  },
+  {
+   "fieldname": "section_budget_lines",
+   "fieldtype": "Section Break",
+   "label": "Budget Lines"
+  },
+  {
+   "fieldname": "budget_lines",
+   "fieldtype": "Table",
+   "label": "Budget Lines",
+   "options": "Project Cost Budget Line",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_totals",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "total_budget_amount",
+   "fieldtype": "Currency",
+   "label": "Total Budgeted Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_actual_amount",
+   "fieldtype": "Currency",
+   "label": "Total Actual Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_variance",
+   "fieldtype": "Currency",
+   "label": "Total Variance",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_approval",
+   "fieldtype": "Section Break",
+   "label": "Approval"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Change Orders",
+   "link_doctype": "Change Order",
+   "link_fieldname": "project_cost_budget"
+  }
+ ],
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Project Cost Budget",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+   {
+    "email": 1,
+    "export": 1,
+    "print": 1,
+    "read": 1,
+    "report": 1,
+    "role": "Accounts User",
+    "share": 1
+   },
+   {
+    "email": 1,
+    "export": 1,
+    "print": 1,
+    "read": 1,
+    "report": 1,
+    "role": "Real Estate User",
+    "share": 1
+   }
+  ],
+ "search_fields": "real_estate_project,approval_status",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "real_estate_project",
+ "track_changes": 1
+}

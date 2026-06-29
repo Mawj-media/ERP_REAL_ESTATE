@@ -1,0 +1,271 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "project_name",
+  "project_status",
+  "company",
+  "cost_center",
+  "column_break_5",
+  "erpnext_project",
+  "start_date",
+  "expected_completion_date",
+  "actual_completion_date",
+  "section_location",
+  "project_location",
+  "land_area",
+  "column_break_13",
+  "land_area_uom",
+  "total_units",
+  "section_financials",
+  "project_budget_total",
+  "total_sales_value",
+  "column_break_18",
+  "total_cost_incurred",
+  "section_partnership",
+  "partnership_type",
+  "column_break_22",
+  "partner_shares",
+  "section_docs",
+  "approval_number",
+  "project_document",
+  "column_break_27",
+  "bank_account_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Project Status",
+   "options": "Planning\nConstruction\nCompleted\nClosed"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "erpnext_project",
+   "fieldtype": "Link",
+   "label": "ERPNext Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date"
+  },
+  {
+   "fieldname": "actual_completion_date",
+   "fieldtype": "Date",
+   "label": "Actual Completion Date"
+  },
+  {
+   "fieldname": "section_location",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "project_location",
+   "fieldtype": "Small Text",
+   "label": "Location / Address"
+  },
+  {
+   "fieldname": "land_area",
+   "fieldtype": "Float",
+   "label": "Land Area"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "land_area_uom",
+   "fieldtype": "Select",
+   "label": "Land Area UOM",
+   "options": "Sq Ft\nSq M\nAcres\nCents"
+  },
+  {
+   "fieldname": "total_units",
+   "fieldtype": "Int",
+   "label": "Total Units",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_financials",
+   "fieldtype": "Section Break",
+   "label": "Financial Summary"
+  },
+  {
+   "fieldname": "project_budget_total",
+   "fieldtype": "Currency",
+   "label": "Project Budget Total",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_sales_value",
+   "fieldtype": "Currency",
+   "label": "Total Sales Value",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_cost_incurred",
+   "fieldtype": "Currency",
+   "label": "Total Cost Incurred",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_partnership",
+   "fieldtype": "Section Break",
+   "label": "Partnership"
+  },
+  {
+   "fieldname": "partnership_type",
+   "fieldtype": "Select",
+   "label": "Partnership Type",
+   "options": "\nSingle Owner\nJoint Venture"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "partner_shares",
+   "fieldtype": "Table",
+   "label": "Partner Shares",
+   "options": "Partner Share"
+  },
+  {
+   "fieldname": "section_docs",
+   "fieldtype": "Section Break",
+   "label": "Documents & Approvals"
+  },
+  {
+   "fieldname": "approval_number",
+   "fieldtype": "Data",
+   "label": "Approval / Permit Number"
+  },
+  {
+   "fieldname": "project_document",
+   "fieldtype": "Attach",
+   "label": "Approved Plan Document"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_account_details",
+   "fieldtype": "Small Text",
+   "label": "Project Bank Account Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Units",
+   "link_doctype": "Unit",
+   "link_fieldname": "real_estate_project"
+  },
+  {
+   "group": "Budget",
+   "link_doctype": "Project Cost Budget",
+   "link_fieldname": "real_estate_project"
+  },
+  {
+   "group": "Bookings",
+   "link_doctype": "Booking",
+   "link_fieldname": "real_estate_project"
+  }
+ ],
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Real Estate Project",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1
+  }
+ ],
+ "search_fields": "project_name,project_status,company",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "project_name",
+ "track_changes": 1
+}

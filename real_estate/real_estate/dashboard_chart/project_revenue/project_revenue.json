@@ -1,0 +1,27 @@
+
+{
+ "based_on": "",
+ "chart_name": "Project Revenue",
+ "chart_type": "Group By",
+ "creation": "2026-01-01 00:00:00",
+ "custom_options": "{\"type\": \"bar\", \"axisOptions\": {\"shortenYAxisNumbers\": 1}}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Booking",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Booking\",\"docstatus\",\"=\",\"1\"]]",
+ "group_by_based_on": "real_estate_project",
+ "group_by_type": "Sum",
+ "aggregate_function_based_on": "sale_value",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "module": "Real Estate",
+ "name": "Project Revenue",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "timeseries": 0,
+ "type": "Bar",
+ "use_report_chart": 0,
+ "y_axis": []
+}

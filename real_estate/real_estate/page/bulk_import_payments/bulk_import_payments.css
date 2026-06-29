@@ -1,0 +1,54 @@
+.bulk-import-payments {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.import-upload-area {
+	min-height: 16rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px dashed var(--dark-border-color, #e2e2e2);
+	border-radius: var(--border-radius, 8px);
+	cursor: pointer;
+	background-color: var(--bg-color, #fff);
+	transition: background-color 0.2s;
+}
+
+.import-upload-area:hover {
+	background-color: var(--subtle-fg, #f9f9f9);
+}
+
+.import-upload-area.dragover {
+	background-color: var(--subtle-fg, #f9f9f9);
+	border-color: var(--primary-color, #2490ef);
+}
+
+.upload-content {
+	text-align: center;
+	padding: 2rem;
+}
+
+.upload-icon {
+	margin-bottom: 1rem;
+	color: var(--text-muted, #7c7c7c);
+}
+
+.drop-text {
+	margin-bottom: 0.5rem;
+	font-size: var(--text-base, 14px);
+	color: var(--text-color, #383838);
+}
+
+.import-preview-section {
+	margin-top: 1.5rem;
+}
+
+.import-preview-table {
+	min-height: 100px;
+}
+
+.import-result-section {
+	margin-top: 1.5rem;
+}

@@ -1,0 +1,341 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contractor",
+  "contractor_name",
+  "real_estate_project",
+  "cost_category",
+  "column_break_5",
+  "claim_date",
+  "period_from",
+  "period_to",
+  "status",
+  "section_work",
+  "description_of_work",
+  "section_amounts",
+  "contract_value",
+  "previous_claimed",
+  "current_claim_percentage",
+  "current_claim_amount",
+  "column_break_15",
+  "total_work_completed_percentage",
+  "total_work_completed_amount",
+  "section_retention",
+  "retention_percentage",
+  "retention_amount",
+  "column_break_20",
+  "previous_retention_released",
+  "section_certification",
+  "amount_certified",
+  "net_payable",
+  "column_break_25",
+  "certifying_authority",
+  "certification_date",
+  "section_invoicing",
+  "purchase_invoice",
+  "column_break_29",
+  "retention_release_date",
+  "retention_released_amount",
+  "section_remarks",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contractor",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "contractor.supplier_name",
+   "fieldname": "contractor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contractor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "real_estate_project",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Real Estate Project",
+   "options": "Real Estate Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cost_category",
+   "fieldtype": "Link",
+   "label": "Cost Category",
+   "options": "Cost Category"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "claim_date",
+   "fieldtype": "Date",
+   "label": "Claim Date"
+  },
+  {
+   "fieldname": "period_from",
+   "fieldtype": "Date",
+   "label": "Period From"
+  },
+  {
+   "fieldname": "period_to",
+   "fieldtype": "Date",
+   "label": "Period To"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nCertified\nInvoiced\nPaid\nDisputed"
+  },
+  {
+   "fieldname": "section_work",
+   "fieldtype": "Section Break",
+   "label": "Description of Work"
+  },
+  {
+   "fieldname": "description_of_work",
+   "fieldtype": "Text Editor",
+   "label": "Description of Work"
+  },
+  {
+   "fieldname": "section_amounts",
+   "fieldtype": "Section Break",
+   "label": "Claim Amounts"
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Currency",
+   "label": "Contract Value",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "previous_claimed",
+   "fieldtype": "Currency",
+   "label": "Previously Claimed",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_claim_percentage",
+   "fieldtype": "Percent",
+   "label": "Current Claim (% of remaining)"
+  },
+  {
+   "fieldname": "current_claim_amount",
+   "fieldtype": "Currency",
+   "label": "Current Claim Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_work_completed_percentage",
+   "fieldtype": "Percent",
+   "label": "Total Completed (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_work_completed_amount",
+   "fieldtype": "Currency",
+   "label": "Total Completed Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_retention",
+   "fieldtype": "Section Break",
+   "label": "Retention"
+  },
+  {
+   "default": "5",
+   "fieldname": "retention_percentage",
+   "fieldtype": "Percent",
+   "label": "Retention (%)"
+  },
+  {
+   "fieldname": "retention_amount",
+   "fieldtype": "Currency",
+   "label": "Retention Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_retention_released",
+   "fieldtype": "Currency",
+   "label": "Previous Retention Released",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_certification",
+   "fieldtype": "Section Break",
+   "label": "Certification"
+  },
+  {
+   "fieldname": "amount_certified",
+   "fieldtype": "Currency",
+   "label": "Amount Certified",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "net_payable",
+   "fieldtype": "Currency",
+   "label": "Net Payable",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "certifying_authority",
+   "fieldtype": "Data",
+   "label": "Certifying Authority"
+  },
+  {
+   "fieldname": "certification_date",
+   "fieldtype": "Date",
+   "label": "Certification Date"
+  },
+  {
+   "fieldname": "section_invoicing",
+   "fieldtype": "Section Break",
+   "label": "Invoicing & Retention Release"
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Purchase Invoice",
+   "options": "Purchase Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "retention_release_date",
+   "fieldtype": "Date",
+   "label": "Retention Release Date"
+  },
+  {
+   "fieldname": "retention_released_amount",
+   "fieldtype": "Currency",
+   "label": "Retention Released Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "section_remarks",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Progress Claim",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1
+  },
+   {
+    "email": 1,
+    "export": 1,
+    "print": 1,
+    "read": 1,
+    "report": 1,
+    "role": "Project Manager",
+    "share": 1,
+    "write": 1
+   },
+   {
+    "amend": 1,
+    "cancel": 1,
+    "create": 1,
+    "delete": 1,
+    "email": 1,
+    "export": 1,
+    "print": 1,
+    "read": 1,
+    "report": 1,
+    "role": "Real Estate User",
+    "share": 1,
+    "submit": 1,
+    "write": 1
+   }
+  ],
+ "search_fields": "contractor_name,real_estate_project,status",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "contractor_name",
+ "track_changes": 1
+}

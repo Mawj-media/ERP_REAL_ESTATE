@@ -1,0 +1,31 @@
+<div class="bulk-import-payments">
+	<div class="import-upload-area">
+		<div class="upload-content">
+			<div class="upload-icon">
+				<svg class="icon icon-xl" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+					<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+				</svg>
+			</div>
+			<p class="drop-text">{{ __("Click to upload or drag & drop a CSV file") }}</p>
+			<p class="text-muted small">{{ __("Columns: customer, booking, amount, payment_date, mode_of_payment, ref_no, ref_date, project") }}</p>
+		</div>
+		<input type="file" class="import-file-input hidden" accept=".csv">
+	</div>
+
+	<div class="import-preview-section hidden">
+		<div class="d-flex justify-content-between align-items-center mb-3">
+			<h4 class="import-preview-count"></h4>
+		</div>
+		<div class="import-preview-table"></div>
+		<div class="mt-3">
+			<button class="btn btn-primary btn-import hidden">
+				{{ __("Import Payments") }}
+			</button>
+		</div>
+	</div>
+
+	<div class="import-result-section hidden mt-4">
+		<h4>{{ __("Import Results") }}</h4>
+		<div class="import-result-content"></div>
+	</div>
+</div>

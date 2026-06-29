@@ -1,0 +1,228 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "booking",
+  "customer",
+  "customer_name",
+  "unit",
+  "section_break_5",
+  "real_estate_project",
+  "status",
+  "handover_date",
+  "section_financials",
+  "total_consideration",
+  "total_amount_paid",
+  "balance_due",
+  "column_break_12",
+  "maintenance_deposit",
+  "legal_charges",
+  "other_charges",
+  "grand_total_due",
+  "section_documents",
+  "possession_letter",
+  "section_checklist",
+  "handover_checklist"
+ ],
+ "fields": [
+  {
+   "fieldname": "booking",
+   "fieldtype": "Link",
+   "label": "Booking",
+   "options": "Booking",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "booking.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "booking.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "booking.unit",
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "Unit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "booking.real_estate_project",
+   "fieldname": "real_estate_project",
+   "fieldtype": "Link",
+   "label": "Real Estate Project",
+   "options": "Real Estate Project",
+   "read_only": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nCompleted"
+  },
+  {
+   "default": "Today",
+   "fieldname": "handover_date",
+   "fieldtype": "Date",
+   "label": "Handover Date"
+  },
+  {
+   "fieldname": "section_financials",
+   "fieldtype": "Section Break",
+   "label": "Financial Settlement"
+  },
+  {
+   "fetch_from": "booking.sale_value",
+   "fieldname": "total_consideration",
+   "fieldtype": "Currency",
+   "label": "Total Consideration",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount_paid",
+   "fieldtype": "Currency",
+   "label": "Total Amount Paid",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance_due",
+   "fieldtype": "Currency",
+   "label": "Balance Due",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_deposit",
+   "fieldtype": "Currency",
+   "label": "Maintenance Deposit",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "legal_charges",
+   "fieldtype": "Currency",
+   "label": "Legal / Registration Charges",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "other_charges",
+   "fieldtype": "Currency",
+   "label": "Other Charges",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "grand_total_due",
+   "fieldtype": "Currency",
+   "label": "Grand Total Due",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_documents",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "possession_letter",
+   "fieldtype": "Attach",
+   "label": "Possession Letter"
+  },
+  {
+   "fieldname": "section_checklist",
+   "fieldtype": "Section Break",
+   "label": "Handover Checklist"
+  },
+  {
+   "fieldname": "handover_checklist",
+   "fieldtype": "Table",
+   "label": "Handover Checklist",
+   "options": "Handover Check Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-01 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Unit Handover",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+   {
+    "email": 1,
+    "export": 1,
+    "print": 1,
+    "read": 1,
+    "report": 1,
+    "role": "Accounts User",
+    "share": 1
+   },
+   {
+    "create": 1,
+    "delete": 1,
+    "email": 1,
+    "export": 1,
+    "print": 1,
+    "read": 1,
+    "report": 1,
+    "role": "Real Estate User",
+    "share": 1,
+    "write": 1
+   }
+  ],
+ "search_fields": "customer_name,unit,status",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer_name",
+ "track_changes": 1
+}

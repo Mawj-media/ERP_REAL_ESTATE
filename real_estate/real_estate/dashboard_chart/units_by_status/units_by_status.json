@@ -1,0 +1,27 @@
+
+{
+ "aggregate_function_based_on": "",
+ "based_on": "",
+ "chart_name": "Units by Status",
+ "chart_type": "Group By",
+ "creation": "2026-01-01 00:00:00",
+ "custom_options": "{\"type\": \"donut\", \"height\": 300}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Unit",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[]",
+ "group_by_based_on": "status",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "module": "Real Estate",
+ "name": "Units by Status",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "timeseries": 0,
+ "type": "Donut",
+ "use_report_chart": 0,
+ "y_axis": []
+}
