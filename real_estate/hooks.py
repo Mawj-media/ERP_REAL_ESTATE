@@ -6,7 +6,7 @@ app_icon = "fa fa-building"
 app_color = "#2c3e50"
 app_email = "dev@example.com"
 app_license = "MIT"
-source_link = "https://github.com/yourorg/real_estate"
+source_link = "https://github.com/Mawj-media/ERP_REAL_ESTATE"
 app_logo_url = "/assets/real_estate/images/logo.svg"
 app_home = "/app/real-estate"
 
